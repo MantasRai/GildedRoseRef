@@ -4,6 +4,6 @@ namespace GildedRose.Contracts
 {
     public interface IItemUpdateContract
     {
-        IStockItemUpdateContract Create(Item item);
+        IItemCreateContract Create(Item item);
     }
 }

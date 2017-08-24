@@ -10,7 +10,12 @@ namespace GildedRose.Console
     {
         public override void Load()
         {
-           // TO-DO Bind interfaces into scopes Main to single instance and depending instance for trancients
+            Bind(typeof(IItemUpdateContract)).To(typeof(UpdateItemMain)).InSingletonScope();
+            Bind(typeof(IItemCreateContract)).To(typeof(AgedBrieModel)).InSingletonScope();
+            Bind(typeof(IItemCreateContract)).To(typeof(BackStageModel)).InSingletonScope();
+            Bind(typeof(IItemCreateContract)).To(typeof(ConjuredModel)).InSingletonScope();
+            Bind(typeof(IItemCreateContract)).To(typeof(StandardUpdateModel)).InSingletonScope();
+            Bind(typeof(IItemCreateContract)).To(typeof(SulfurasModel)).InSingletonScope();
         }
     }
 }

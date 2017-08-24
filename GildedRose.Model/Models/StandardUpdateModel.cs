@@ -4,11 +4,14 @@ using GildedRose.Contracts.Dto;
 
 namespace GildedRose.Model.Models
 {
-    internal class StandardUpdateModel: IStockItemUpdateContract
+    public class StandardUpdateModel: IItemCreateContract
     {
         public void UpdateItem(Item item)
         {
             throw new NotImplementedException();
+            /*
+                sellin - 1; sellin >= 0; quality - 1 if sellin = 0;
+            */
         }
     }
 }

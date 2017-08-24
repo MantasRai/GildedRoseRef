@@ -7,14 +7,26 @@ namespace GildedRose.Model
 {
     public class UpdateItemMain : IItemUpdateContract
     {
-        public IStockItemUpdateContract Create(Item item)
+        public IItemCreateContract Create(Item item)
         {
             if (item == null)
                 throw new ArgumentNullException(nameof(item), "Parameter: " + nameof(item) + " can not be null");
 
-            // TO-DO implement logic of choosing correct model
-
-            return null;
+            if (item.Name == "Aged Brie")
+                return new AgedBrieModel();
+            if (item.Name == "Sulfuras, Hand of Ragnaros")
+            {
+                return new SulfurasModel();
+            }
+            if (item.Name == "Conjured Mana Cake")
+            {
+                return new ConjuredModel();
+            }
+            if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
+            {
+                return new BackStageModel();
+            }
+            return new StandardUpdateModel();
         }
     }
 }

@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DefaultAppData.cs" />
     <Compile Include="diContainer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -56,6 +57,20 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GildedRose.Contracts\GildedRose.Contracts.csproj">
+      <Project>{a91311a1-6f09-4720-88f4-c2566c8b0102}</Project>
+      <Name>GildedRose.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GildedRose.Model\GildedRose.Model.csproj">
+      <Project>{f595cdbc-562d-472e-bd45-10aaa4b398e3}</Project>
+      <Name>GildedRose.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GildedRose.Tests\GildedRose.Tests.csproj">
+      <Project>{cd4715a2-532e-4c74-bc40-36ee64f61fca}</Project>
+      <Name>GildedRose.Tests</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
