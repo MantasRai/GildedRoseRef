@@ -8,8 +8,18 @@ namespace GildedRose.Model.Models
     {
         public void UpdateItem(Item item)
         {
-            throw new NotImplementedException();
-            //"Conjured" items degrade in Quality twice as fast as normal items
+            if (item.Quality > 2)
+            {
+                item.Quality -= 2;
+            }
+            else
+            {
+                if (item.Quality == 1)
+                    item.Quality--;
+            }
+            //"Conjured" items degrade in Quality twice as fast as normal items | So found a bug and fixed in this refact solution
+            if (item.SellIn > 0)
+                item.SellIn--;
         }
     }
 }

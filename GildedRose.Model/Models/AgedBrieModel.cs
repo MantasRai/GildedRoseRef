@@ -8,21 +8,12 @@ namespace GildedRose.Model.Models
     {
         public void UpdateItem(Item item)
         {
-            throw new NotImplementedException();
-            /* 
-            item.SellIn = item.SellIn - 1;
-
-            // ?
+            item.SellIn--;
             if (item.Quality < 50)
-                    {
-                        item.Quality = item.Quality + 1;
-                    }
-
-            if (item.SellIn >= 0) continue;
-            if (item.Quality < 50)
-                    {
-                        item.Quality = item.Quality + 1;
-            */
+                item.Quality++;
+            //"Aged Brie" actually increases in Quality the older it gets | So need to double check it
+            if (item.SellIn < 0 && item.Quality < 50)
+                item.Quality = item.Quality + 1;
         }
     }
 }

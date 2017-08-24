@@ -8,10 +8,10 @@ namespace GildedRose.Model.Models
     {
         public void UpdateItem(Item item)
         {
-            throw new NotImplementedException();
-            /*
-                sellin - 1; sellin >= 0; quality - 1 if sellin = 0;
-            */
+            if (item.Quality > 0)
+                item.Quality--;
+            if (item.SellIn > 0)
+                item.SellIn--;
         }
     }
 }

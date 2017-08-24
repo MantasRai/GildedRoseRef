@@ -15,10 +15,11 @@ namespace GildedRose.Console
         {
             ItemUpdateContract = itemUpdateContract;
         }
+
         static void Main(string[] args)
         {
             System.Console.WriteLine("OMGHAI!");
-            
+
             var kernal = new StandardKernel(new DiContainer());
 
             var mainWorker = new Program(kernal.Get<IItemUpdateContract>())
@@ -29,11 +30,12 @@ namespace GildedRose.Console
 
             System.Console.ReadKey();
         }
+
         public void UpdateQuality()
         {
             foreach (var item in Items)
             {
-                ItemUpdateContract.Create(item).UpdateItem(item); 
+                ItemUpdateContract.Create(item).UpdateItem(item);
             }
         }
     }
