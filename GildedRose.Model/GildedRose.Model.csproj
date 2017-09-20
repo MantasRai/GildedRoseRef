@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="Models\AgedBrieModel.cs" />
     <Compile Include="Models\BackStageModel.cs" />
-    <Compile Include="Models\ConjuredModel.cs" />
     <Compile Include="Models\StandardUpdateModel.cs" />
     <Compile Include="Models\SulfurasModel.cs" />
     <Compile Include="UpdateItemMain.cs" />

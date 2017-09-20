@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GildedRose.Tests", "src\GildedRose.Tests\GildedRose.Tests.csproj", "{CD4715A2-532E-4C74-BC40-36EE64F61FCA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A91311A1-6F09-4720-88F4-C2566C8B0102} = {A91311A1-6F09-4720-88F4-C2566C8B0102}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{21A00AD6-7CA9-4991-98A7-0E9BD6BDFF32}"
 	ProjectSection(SolutionItems) = preProject
@@ -30,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GildedRose.Contracts", "Gil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GildedRose.Model", "GildedRose.Model\GildedRose.Model.csproj", "{F595CDBC-562D-472E-BD45-10AAA4B398E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GildedRose.ConsoleTests", "GildedRose.ConsoleTests1\GildedRose.ConsoleTests.csproj", "{08B5E573-F653-41C3-B2A9-224A6B417FB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +57,10 @@ Global
 		{F595CDBC-562D-472E-BD45-10AAA4B398E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F595CDBC-562D-472E-BD45-10AAA4B398E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F595CDBC-562D-472E-BD45-10AAA4B398E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08B5E573-F653-41C3-B2A9-224A6B417FB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08B5E573-F653-41C3-B2A9-224A6B417FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08B5E573-F653-41C3-B2A9-224A6B417FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08B5E573-F653-41C3-B2A9-224A6B417FB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

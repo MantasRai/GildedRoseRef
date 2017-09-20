@@ -1,17 +1,17 @@
 ﻿using System.Collections.Generic;
 using GildedRose.Contracts;
-using GildedRose.Contracts.Dto;
+using GildedRose.Contracts.Entities;
 using Ninject;
 using static GildedRose.Console.DefaultAppData;
 
 namespace GildedRose.Console
 {
-    class Program
+    public class Program
     {
         public IList<Item> Items;
-        private IItemUpdateContract ItemUpdateContract { get; }
+        private IItemUpdateContractFactory ItemUpdateContract { get; }
 
-        public Program(IItemUpdateContract itemUpdateContract)
+        public Program(IItemUpdateContractFactory itemUpdateContract)
         {
             ItemUpdateContract = itemUpdateContract;
         }
@@ -22,7 +22,7 @@ namespace GildedRose.Console
 
             var kernal = new StandardKernel(new DiContainer());
 
-            var mainWorker = new Program(kernal.Get<IItemUpdateContract>())
+            var mainWorker = new Program(kernal.Get<IItemUpdateContractFactory>())
             {
                 Items = GetDefaultData()
             };

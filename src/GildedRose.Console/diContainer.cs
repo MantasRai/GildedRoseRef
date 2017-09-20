@@ -10,12 +10,11 @@ namespace GildedRose.Console
     {
         public override void Load()
         {
-            Bind(typeof(IItemUpdateContract)).To(typeof(UpdateItemMain)).InSingletonScope();
-            Bind(typeof(IItemCreateContract)).To(typeof(AgedBrieModel)).InSingletonScope();
-            Bind(typeof(IItemCreateContract)).To(typeof(BackStageModel)).InSingletonScope();
-            Bind(typeof(IItemCreateContract)).To(typeof(ConjuredModel)).InSingletonScope();
-            Bind(typeof(IItemCreateContract)).To(typeof(StandardUpdateModel)).InSingletonScope();
-            Bind(typeof(IItemCreateContract)).To(typeof(SulfurasModel)).InSingletonScope();
+            Bind(typeof(IItemUpdateContractFactory)).To(typeof(UpdateItemMain)).InSingletonScope();
+            Bind(typeof(IItemUpdateContract)).To(typeof(AgedBrieModel)).InSingletonScope();
+            Bind(typeof(IItemUpdateContract)).To(typeof(BackStageModel)).InSingletonScope();
+            Bind(typeof(IItemUpdateContract)).To(typeof(StandardUpdateModel)).InSingletonScope();
+            Bind(typeof(IItemUpdateContract)).To(typeof(SulfurasModel)).InSingletonScope();
         }
     }
 }

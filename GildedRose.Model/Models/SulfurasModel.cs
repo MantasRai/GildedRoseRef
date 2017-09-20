@@ -1,10 +1,10 @@
 ﻿using System;
 using GildedRose.Contracts;
-using GildedRose.Contracts.Dto;
+using GildedRose.Contracts.Entities;
 
 namespace GildedRose.Model.Models
 {
-    public class SulfurasModel : IItemCreateContract
+    public class SulfurasModel : IItemUpdateContract
     {
         public void UpdateItem(Item item)
         {

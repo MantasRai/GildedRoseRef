@@ -1,9 +1,9 @@
-﻿using GildedRose.Contracts.Dto;
+﻿using GildedRose.Contracts.Entities;
 
 namespace GildedRose.Contracts
 {
-    public interface IItemUpdateContract
+    public interface IItemUpdateContractFactory
     {
-        IItemCreateContract Create(Item item);
+        IItemUpdateContract Create(Item item);
     }
 }

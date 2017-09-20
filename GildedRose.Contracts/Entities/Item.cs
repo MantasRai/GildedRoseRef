@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GildedRose.Contracts.Dto
+namespace GildedRose.Contracts.Entities
 {
     public class Item
     {

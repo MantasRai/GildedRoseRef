@@ -1,17 +1,26 @@
 ﻿using System;
 using GildedRose.Contracts;
-using GildedRose.Contracts.Dto;
+using GildedRose.Contracts.Entities;
 
 namespace GildedRose.Model.Models
 {
-    public class StandardUpdateModel: IItemCreateContract
+    public class StandardUpdateModel : IItemUpdateContract
     {
+        private readonly int _factor;
+
+        public StandardUpdateModel(int factor = 1)
+        {
+            _factor = factor;
+        }
+
         public void UpdateItem(Item item)
         {
+            item.SellIn--; // Can it be negative?
             if (item.Quality > 0)
-                item.Quality--;
-            if (item.SellIn > 0)
-                item.SellIn--;
+                item.Quality -= (item.SellIn < 0 ? 2 : 1) * _factor;
+
+            if (item.Quality < 0)
+                item.Quality = 0;
         }
     }
 }
